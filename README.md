@@ -26,7 +26,6 @@ Agentic-AI-Document-Compliance/
 ├── sample_docs/              # Sample input documents (PDFs, images) for testing and demo
 │
 ├── reports/                  # Folder for storing extraction results, Excel exports, and logs
-│   └── .gitkeep              # Placeholder to keep this folder tracked in Git
 │
 ├── requirements.txt          # Python dependencies required to run the project
 │
