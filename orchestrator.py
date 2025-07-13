@@ -1,4 +1,3 @@
-from html import entities
 import os, glob
 from collections import defaultdict
 import pandas as pd
@@ -20,12 +19,12 @@ def orchestrate(directory="sample_docs/"):
 
         print(f"\n[Extracted from {pdf_path}]")
         print(entities)
-        
+
         docs.append({"pdf_name": pdf_name, "doc_type": doc_type, "fields": entities})
         vres.extend(run_rule_based_validation(doc_type, entities, pdf_name))
 
     dres = run_discrepancy_agent(docs)
-    return vres, dres
+    return vres, dres, docs  # return extracted docs too
 
 def export_report_to_excel(validation_results, discrepancy_results, filename="reports/compliance_report.xlsx"):
     grouped = defaultdict(lambda: {
@@ -58,5 +57,3 @@ def export_report_to_excel(validation_results, discrepancy_results, filename="re
     os.makedirs(os.path.dirname(filename), exist_ok=True)
     pd.DataFrame(data).to_excel(filename, index=False)
     print(f"✅ Report exported to {filename}")
-
-    
