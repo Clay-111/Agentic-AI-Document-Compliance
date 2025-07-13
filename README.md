@@ -67,13 +67,8 @@ Agentic-AI-Document-Compliance/
      - Displays the extracted values from each PDF.
    - Click the **✅ Validation Issues button**
      - Shows the issues in each PDF and what needs to be fixed.
-   - Click the **⚠️ Discrepancies
-   - After that, Click the **🔍 View Results button button**.
+   - Click the **⚠️ Discrepancies button**.
      - Summarizes the outcome of the cross-document analysis.
-   - The UI will display:
-        - Extracted fields
-        - Validation Issues
-        - Discrepancies across documents
     - After each run:
         - An Excel report is saved in the `reports/` folder.
         - Open this file to review the structured results.
