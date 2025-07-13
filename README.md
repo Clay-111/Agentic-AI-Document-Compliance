@@ -55,9 +55,9 @@ Agentic-AI-Document-Compliance/
    http://localhost:8501
 3. In the UI:
    - Use the file uploader to upload one or more documents (PDF)
-   - Click the **🚀 Run Validation" button**.
+   - Click the **"🚀 Run Validation" button**.
    - Wait for the processing to complete.
-   - After that, Click **🔍 View Results**.
+   - After that, Click **"🔍 View Results" button**.
    - The UI will display:
         - Extracted fields
         - Validation Issues
