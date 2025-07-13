@@ -10,7 +10,7 @@ This project demonstrates how multiple specialized agents work together in an or
 
 ## 📁 Project Structure
 
-'''
+```
 Agentic-AI-Document-Compliance/
 |
 +-- agents/
@@ -31,7 +31,7 @@ Agentic-AI-Document-Compliance/
 +-- requirements.txt # Python dependencies required to run the project
 |
 +-- README.md # Project documentation (this file)
-'''
+```
 
 
 
