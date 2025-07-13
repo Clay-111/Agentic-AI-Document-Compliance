@@ -1,0 +1,53 @@
+{
+  "invoice": [
+    {"rule_id": "INV-001", "field": "total_amount", "condition": "<= 0", "issue": "Total amount must be positive.", "severity": "Medium", "action": "Fix amount."},
+    {"rule_id": "INV-002", "field": "Consignee", "condition": "missing", "issue": "Missing consignee.", "severity": "High", "action": "Add consignee."},
+    {"rule_id": "INV-003", "field": "invoice_number", "condition": "missing", "issue": "Missing invoice number.", "severity": "High", "action": "Add invoice number."},
+    {"rule_id": "INV-004", "field": "currency", "condition": "missing", "issue": "Currency not specified.", "severity": "Medium", "action": "Add currency."},
+    {"rule_id": "INV-005", "field": "supplier", "condition": "missing", "issue": "Missing supplier name.", "severity": "High", "action": "Add supplier."},
+    {"rule_id": "INV-006", "field": "issue_date", "condition": "missing", "issue": "Issue date missing.", "severity": "Medium", "action": "Specify issue date."},
+    {"rule_id": "INV-007", "field": "due_date", "condition": "missing", "issue": "Due date missing.", "severity": "Medium", "action": "Specify due date."},
+    {"rule_id": "INV-008", "field": "due_date < issue_date", "condition": "expression", "issue": "Due date is earlier than issue date.", "severity": "High", "action": "Correct date logic."},
+    {"rule_id": "INV-009", "field": "items", "condition": "missing", "issue": "No items listed.", "severity": "Medium", "action": "List invoiced items."},
+    {"rule_id": "INV-010", "field": "Consignee != bol_consignee", "condition": "expression", "issue": "Consignee mismatch with bill of lading.", "severity": "High", "action": "Fix consignee inconsistency."}
+  ],
+  
+  "bill_of_lading": [
+    {"rule_id": "BL-001", "field": "shipment_date > expiry_date", "condition": "expression", "issue": "Shipment date exceeds LC expiry date.", "severity": "High", "action": "Reject or amend."},
+    {"rule_id": "BL-002", "field": "Consignee", "condition": "missing", "issue": "Missing consignee name.", "severity": "High", "action": "Provide consignee."},
+    {"rule_id": "BL-003", "field": "shipper", "condition": "missing", "issue": "Missing shipper name.", "severity": "High", "action": "Provide shipper."},
+    {"rule_id": "BL-004", "field": "port_loading", "condition": "missing", "issue": "Port of loading missing.", "severity": "Medium", "action": "Add port of loading."},
+    {"rule_id": "BL-005", "field": "port_discharge", "condition": "missing", "issue": "Port of discharge missing.", "severity": "Medium", "action": "Add port of discharge."},
+    {"rule_id": "BL-006", "field": "goods_desc", "condition": "missing", "issue": "Missing goods description.", "severity": "Medium", "action": "Add description."},
+    {"rule_id": "BL-007", "field": "signed", "condition": "missing", "issue": "Unsigned document.", "severity": "High", "action": "Must be signed by carrier."},
+    {"rule_id": "BL-008", "field": "carrier", "condition": "missing", "issue": "Missing carrier.", "severity": "High", "action": "Add carrier name."},
+    {"rule_id": "BL-009", "field": "shipment_date", "condition": "invalid_date", "issue": "Invalid shipment date format.", "severity": "Medium", "action": "Use YYYY-MM-DD."},
+    {"rule_id": "BL-010", "field": "Consignee != invoice_consignee", "condition": "expression", "issue": "Consignee mismatch with invoice.", "severity": "High", "action": "Fix consignee inconsistency."}
+  ],
+
+  "id": [
+    {"rule_id": "ID-001", "field": "id_number", "condition": "missing", "issue": "Missing ID number.", "severity": "High", "action": "Add ID number."},
+    {"rule_id": "ID-002", "field": "name", "condition": "missing", "issue": "Missing name.", "severity": "High", "action": "Add full name."},
+    {"rule_id": "ID-003", "field": "dob", "condition": "missing", "issue": "Missing date of birth.", "severity": "Medium", "action": "Add DOB."},
+    {"rule_id": "ID-004", "field": "expiry_date < submission_date", "condition": "expression", "issue": "ID is expired.", "severity": "High", "action": "Use a valid ID."},
+    {"rule_id": "ID-005", "field": "nationality", "condition": "missing", "issue": "Missing nationality.", "severity": "Medium", "action": "Specify nationality."},
+    {"rule_id": "ID-006", "field": "id_number.length < 6", "condition": "expression", "issue": "ID number too short.", "severity": "High", "action": "Verify ID format."},
+    {"rule_id": "ID-007", "field": "issue_date", "condition": "missing", "issue": "Issue date missing.", "severity": "Medium", "action": "Specify issue date."},
+    {"rule_id": "ID-008", "field": "document_type", "condition": "missing", "issue": "Missing document type.", "severity": "Medium", "action": "Add type."},
+    {"rule_id": "ID-009", "field": "gender", "condition": "missing", "issue": "Gender missing.", "severity": "Low", "action": "Add gender."},
+    {"rule_id": "ID-010", "field": "issuing_authority", "condition": "missing", "issue": "Missing issuing authority.", "severity": "Medium", "action": "Add authority."}
+  ],
+
+  "paystub": [
+    {"rule_id": "PS-001", "field": "monthly_income", "condition": "< 3000", "issue": "Income below threshold.", "severity": "Medium", "action": "Request income proof."},
+    {"rule_id": "PS-002", "field": "employer_name", "condition": "missing", "issue": "Missing employer name.", "severity": "High", "action": "Add employer."},
+    {"rule_id": "PS-003", "field": "pay_date", "condition": "missing", "issue": "Missing pay date.", "severity": "Medium", "action": "Add pay date."},
+    {"rule_id": "PS-004", "field": "salary_period", "condition": "missing", "issue": "Missing salary period.", "severity": "Low", "action": "Add salary period."},
+    {"rule_id": "PS-005", "field": "employee_id", "condition": "missing", "issue": "Missing employee ID.", "severity": "Medium", "action": "Provide employee ID."},
+    {"rule_id": "PS-006", "field": "employee_id", "condition": "not_string", "issue": "Invalid employee ID format.", "severity": "Low", "action": "Use string format."},
+    {"rule_id": "PS-007", "field": "deductions", "condition": "missing", "issue": "Missing deductions info.", "severity": "Low", "action": "Add deductions."},
+    {"rule_id": "PS-008", "field": "net_pay", "condition": "missing", "issue": "Missing net pay.", "severity": "Medium", "action": "Calculate net pay."},
+    {"rule_id": "PS-009", "field": "gross_pay", "condition": "missing", "issue": "Missing gross pay.", "severity": "Medium", "action": "Add gross pay."},
+    {"rule_id": "PS-010", "field": "net_pay > gross_pay", "condition": "expression", "issue": "Net pay exceeds gross pay.", "severity": "High", "action": "Correct pay values."}
+  ]
+}
