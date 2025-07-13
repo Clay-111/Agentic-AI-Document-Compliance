@@ -1,6 +1,6 @@
 # 📄 Agentic-AI-Document-Compliance
 
-## 📌 Project Overview
+## 🚀 Project Overview
 
 Agentic AI Document Compliance is a modular prototype designed to automate document compliance validation using an agent-based architecture. It processes documents such as invoices, bills of lading, IDs, paystubs, etc., by extracting relevant fields, validating them against predefined rules, detecting discrepancies across documents, and providing a user-friendly interface for review.
 
@@ -14,7 +14,7 @@ This project demonstrates how multiple specialized agents work together in an or
 Agentic-AI-Document-Compliance/
 │
 ├── agents/
-│   ├── extraction.py         # Performs OCR and extracts fields from documents
+│   ├── extraction.py         # Performs OCR and NLP-based field extraction from documents
 │   ├── validation.py         # Applies rule-based validation (schema or expressions)
 │   └── discrepancy.py        # Detects and maps inconsistencies across documents
 │
@@ -30,9 +30,17 @@ Agentic-AI-Document-Compliance/
 │
 ├── requirements.txt          # Python dependencies required to run the project
 │
-│── rules.json                # Pre-defined rules for the documents 
+│── rules.json                # Predefined validation rules for each document type
+│
 └── README.md                 # Project documentation (this file)
 ```
 
+## 🛠️ Tech Stack
+
+- Python	– Core programming language for the entire system
+- Streamlit – Lightweight web framework to build the interactive user interface
+- Tesseract OCR	– Optical Character Recognition engine used to extract text from images and PDFs
+- spaCy	– NLP library for entity recognition, text pre-processing, and rule-based matching
+- openpyxl – Generates and exports Excel reports
 
 
