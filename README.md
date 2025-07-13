@@ -46,13 +46,20 @@ Agentic-AI-Document-Compliance/
 ---
 ## ⚙️ How It Works 
 
-1. Run the Streamlit UI:
+1. Download Tesseract-OCR and install it exactly in this folder `C:\\Program Files\\Tesseract-OCR\\tesseract.exe`
+2. Download Poppler for Windows: https://github.com/oschwartz10612/poppler-windows/releases/
+   - Extract the zip exactly here: `C:\poppler`
+   - Add Poppler to PATH:
+     - Open **Start Menu → Environment Variables**
+     - Under **System Variables**, find Path and click Edit
+     - Add this path: `C:\poppler\Library\bin`
+4. Run the Streamlit UI:
    ```bash
    streamlit run ui/app.py
-2. Wait for the UI to open automatically in your browser. If it doesn't, visit:
+5. Wait for the UI to open automatically in your browser. If it doesn't, visit:
    ```bash
    http://localhost:8501
-3. In the UI:
+6. In the UI:
    - Use the file uploader to upload one or more documents (PDF)
    - Click the **🚀 Run Validation button**.
    - Wait for the processing to complete.
