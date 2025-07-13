@@ -15,7 +15,7 @@ Agentic-AI-Document-Compliance/
 │
 ├── agents/
 │   ├── extraction.py         # Performs OCR and NLP-based field extraction from documents
-│   ├── validation.py         # Applies rule-based validation (schema or expressions)
+│   ├── validation.py         # Applies rule-based validation
 │   └── discrepancy.py        # Detects and maps inconsistencies across documents
 │
 ├── orchestrator.py           # Coordinates the agents and manages the overall pipeline workflow
