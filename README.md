@@ -46,6 +46,10 @@ Agentic-AI-Document-Compliance/
 ---
 ## ⚙️ How It Works 
 
+**Note:** ⚠️ The validation rules are currently defined for the sample PDF files located in the `sample_docs` folder. To process new or different PDFs, the rules may need to be updated to match the fields and formats of those documents.
+
+
+
 1. Download Tesseract-OCR and install it exactly in this folder `C:\\Program Files\\Tesseract-OCR\\tesseract.exe`
 2. Download Poppler for Windows: https://github.com/oschwartz10612/poppler-windows/releases/
    - Extract the zip exactly here: `C:\poppler`
