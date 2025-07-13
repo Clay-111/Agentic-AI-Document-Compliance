@@ -35,6 +35,7 @@ Agentic-AI-Document-Compliance/
 └── README.md                 # Project documentation (this file)
 ```
 
+---
 ## 🛠️ Tech Stack
 
 - **Python** – Core programming language for the entire system
@@ -43,7 +44,7 @@ Agentic-AI-Document-Compliance/
 - **spaCy** – NLP library for entity recognition, pre-processing, and rule-based matching
 - **openpyxl** – Generates and exports Excel reports
 
-
+---
 ## ⚙️ How It Works 
 
 1. Run the Streamlit UI:
