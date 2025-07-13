@@ -44,4 +44,27 @@ Agentic-AI-Document-Compliance/
 - **openpyxl** – Generates and exports Excel reports
 
 
+## ⚙️ How It Works 
+
+1. Run the Streamlit UI:
+   ```bash
+   streamlit run ui/app.py
+2. Wait for the UI to open automatically in your browser. If it doesn't, visit:
+   ```bash
+   http://localhost:8501
+3. In the UI:
+   - Use the file uploader to upload one or more documents (PDF)
+   - Click the **🚀 Run Validation" button**.
+   - Wait for the processing to complete.
+   - After that, Click **🔍 View Results**.
+   - The UI will display:
+        - Extracted fields
+        - Validation Issues
+        - Discrepancies across documents
+    - After each run:
+        - An Excel report is saved in the `reports/` folder.
+        - Open this file to review the structured results.
+
+    
+
 
