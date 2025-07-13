@@ -63,7 +63,13 @@ Agentic-AI-Document-Compliance/
    - Use the file uploader to upload one or more documents (PDF)
    - Click the **🚀 Run Validation button**.
    - Wait for the processing to complete.
-   - After that, Click **🔍 View Results button**.
+   - After that Click the **📋 View Extracted Fields button**.
+     - Displays the extracted values from each PDF.
+   - Click the **✅ Validation Issues button**
+     - Shows the issues in each PDF and what needs to be fixed.
+   - Click the **⚠️ Discrepancies
+   - After that, Click the **🔍 View Results button button**.
+     - Summarizes the outcome of the cross-document analysis.
    - The UI will display:
         - Extracted fields
         - Validation Issues
